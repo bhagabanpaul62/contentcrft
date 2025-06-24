@@ -281,7 +281,7 @@ export default function Home() {
               </div>
               {isSubscribed && (
                 <p className="text-gray-300 text-sm mt-2 animate-fade-in">
-                  Thank you! We'll notify you when we launch.
+                 {" Thank you! We'll notify you when we launch."}
                 </p>
               )}
             </div>
