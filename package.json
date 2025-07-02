@@ -9,11 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.1.2",
     "@supabase/supabase-js": "^2.50.1",
+    "@tabler/icons-react": "^3.34.0",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
+    "@types/three": "^0.177.0",
+    "cloudinary": "^2.7.0",
+    "clsx": "^2.1.1",
+    "dotted-map": "^2.2.3",
     "lucide-react": "^0.523.0",
+    "motion": "^12.19.2",
     "next": "15.3.4",
+    "next-themes": "^0.4.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.3.1",
+    "three": "^0.177.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
