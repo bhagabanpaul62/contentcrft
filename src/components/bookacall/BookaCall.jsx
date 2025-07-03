@@ -4,8 +4,8 @@ import { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  "nbzqhzybwwmtplrficsr.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ienFoenlid3dtdHBscmZpY3NyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEyNjg3OTksImV4cCI6MjA2Njg0NDc5OX0.GhDQW7oDsMlGmq94rbBvGVn5VjswTtNEmBZOuxV4sK0"
 );
 
 export default function BookaCall() {
