@@ -45,13 +45,13 @@ const DevProjects = [
 
 const images = [
   {
-    src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751444983/bg5lmwkrwlczu54fsigc.jpg",
+    src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751556997/lqpifhsdynqp9e9qg0bm.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751444982/wkhgazantfmveqatsjtm.jpg",
+    src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751556863/jsen7nsdxb7poeornw1y.jpg",
   },
   {
-    src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751444981/wugjjckiynpfolqov1lt.jpg",
+    src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751556995/gw9n4liecom4u8wpxbse.jpg",
   },
 ];
 
