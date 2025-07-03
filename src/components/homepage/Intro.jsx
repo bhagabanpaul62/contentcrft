@@ -53,6 +53,9 @@ const images = [
   {
     src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751556995/gw9n4liecom4u8wpxbse.jpg",
   },
+  {
+    src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751557464/uvkyesrxixizd7zw1gnl.jpg",
+  },
 ];
 
 function Intro() {
@@ -155,12 +158,9 @@ function Intro() {
                 src={video.src}
                 poster={video.poster}
                 playsInline
-                
                 className="w-full aspect-[9/16] object-cover"
               />
-              <p className="text-center mt-2 text-zinc-200 text-sm">
-                
-              </p>
+              <p className="text-center mt-2 text-zinc-200 text-sm"></p>
             </div>
           ))}
         </div>
