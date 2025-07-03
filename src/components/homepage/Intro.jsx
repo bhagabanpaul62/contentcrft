@@ -53,9 +53,7 @@ const images = [
   {
     src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751556995/gw9n4liecom4u8wpxbse.jpg",
   },
-  {
-    src: "https://res.cloudinary.com/dctuopwpn/image/upload/v1751557464/uvkyesrxixizd7zw1gnl.jpg",
-  },
+  
 ];
 
 function Intro() {
