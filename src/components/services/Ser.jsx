@@ -7,7 +7,7 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 
 export function Ser() {
   return (
-    <div className="py-20 px-4 w-full  overflow-x-auto ">
+    <div className="py-20 px-4 w-full overflow-x-auto">
       <div className="flex flex-row gap-6 w-max h-full ml-auto mr-auto">
         {/* Web Development */}
         <Link href="/portfolio/webdevelopment" className="shrink-0 w-[300px]">
@@ -19,7 +19,7 @@ export function Ser() {
           </Card>
         </Link>
 
-        {/* Short Form Video Editing */}
+        {/* Motion Graphics */}
         <Link href="/portfolio/shortfromvideo" className="shrink-0 w-[300px]">
           <Card title="Motion Graphics">
             <CanvasRevealEffect
@@ -34,12 +34,12 @@ export function Ser() {
           </Card>
         </Link>
 
-        {/* Commercial Video Shooting */}
+        {/* Commercial Video */}
         <Link
           href="/portfolio/commercialvideoshoot"
           className="shrink-0 w-[300px]"
         >
-          <Card title="Commercial Video Shooting">
+          <Card title="Commercial Video">
             <CanvasRevealEffect
               animationSpeed={3}
               containerClassName="bg-sky-600"
@@ -55,19 +55,39 @@ export function Ser() {
 const Card = ({ title, children }) => {
   const [hovered, setHovered] = React.useState(false);
 
+  // Detect mobile
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  React.useEffect(() => {
+    if (isMobile) {
+      setHovered(true); // force hover always ON for mobile
+    }
+  }, [isMobile]);
+
   return (
     <div
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseLeave={() => {
+        if (!isMobile) setHovered(false);
+      }}
       className="relative border border-white/10 group/canvas-card flex items-center justify-center rounded-lg p-4 h-[26rem] w-full"
     >
-      {/* Corners */}
+      {/* Corner Icons */}
       <Icon className="absolute h-5 w-5 -top-3 -left-3 text-white" />
       <Icon className="absolute h-5 w-5 -top-3 -right-3 text-white" />
       <Icon className="absolute h-5 w-5 -bottom-3 -left-3 text-white" />
       <Icon className="absolute h-5 w-5 -bottom-3 -right-3 text-white" />
 
-      {/* Animation Overlay */}
+      {/* Background Animation */}
       <AnimatePresence>
         {hovered && (
           <motion.div
@@ -82,14 +102,29 @@ const Card = ({ title, children }) => {
 
       {/* Content */}
       <div className="relative z-20 text-center">
-        <div className="transition duration-200 group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 flex items-center justify-center">
-          <img
-            src="/logo.jpg"
-            alt="logo"
-            className="w-20 h-20 rounded-full object-cover"
-          />
+        {/* Show logo on desktop only when not hovered */}
+        <div
+          className={`transition duration-200 ${
+            hovered || isMobile ? "opacity-0 -translate-y-4" : "opacity-100"
+          } flex items-center justify-center`}
+        >
+          {!isMobile && (
+            <img
+              src="/logo.jpg"
+              alt="logo"
+              className="w-20 h-20 rounded-full object-cover"
+            />
+          )}
         </div>
-        <h2 className="text-xl font-bold text-white opacity-0 group-hover/canvas-card:opacity-100 mt-4 transition duration-200 group-hover/canvas-card:-translate-y-2">
+
+        {/* Show title on hover or mobile */}
+        <h2
+          className={`text-xl font-bold text-white mt-4 transition duration-200 ${
+            hovered || isMobile
+              ? "opacity-100 -translate-y-2"
+              : "opacity-0 translate-y-0"
+          }`}
+        >
           {title}
         </h2>
       </div>

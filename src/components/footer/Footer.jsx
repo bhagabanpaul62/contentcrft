@@ -6,7 +6,7 @@ const portfolio = [
   { name: "Web Development", link: "/portfolio/webdevelopment" },
   { name: "Short Form Video Editing", link: "/portfolio/shortfromvideo" },
   {
-    name: "Commercial Video Shooting",
+    name: "Commercial Video",
     link: "/portfolio/commercialvideoshoot",
   },
 ];

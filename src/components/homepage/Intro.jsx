@@ -8,14 +8,20 @@ const Motion = [
   {
     title: "Forest Adventure",
     src: "https://res.cloudinary.com/dctuopwpn/video/upload/v1751266132/q3dagqlkenwwrybkyfys.mp4",
+    poster:
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751519639/eubobnqektyi0vlsmshb.png",
   },
   {
     title: "Valley of Life",
     src: "https://res.cloudinary.com/dctuopwpn/video/upload/v1751266131/hhvuj4c6iady1bcbmai2.mp4",
+    poster:
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751519640/q2dzngffw6bozoexebyb.png",
   },
   {
     title: "Sala behta hi jayega",
-    src: "https://res.cloudinary.com/dctuopwpn/video/upload/v1751266121/xhs5sojpxcyftub0xyh8.mp4",
+    src: "https://res.cloudinary.com/dctuopwpn/video/upload/v1751266113/pxsbosxhgrq9nroexy4l.mp4",
+    poster:
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751520143/h2wrrs8thjf0vhykatdo.png",
   },
 ];
 
@@ -147,9 +153,7 @@ function Intro() {
               <video
                 ref={(el) => (videoRefs.current[i] = el)}
                 src={video.src}
-                poster={video.src
-                  .replace("/upload/", "/upload/so_50p/")
-                  .replace(".mp4", ".jpg")}
+                poster={video.poster}
                 playsInline
                 
                 className="w-full aspect-[9/16] object-cover"

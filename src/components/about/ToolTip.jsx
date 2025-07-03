@@ -14,7 +14,7 @@ const people = [
     name: "Sujay Roy",
     designation: "Motion Designer & Video Editor",
     image:
-      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751470041/yenqdnd27lwvwy7nljfs.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751519640/iimvrwspsnxttkwodhxg.png",
   },
   {
     id: 3,

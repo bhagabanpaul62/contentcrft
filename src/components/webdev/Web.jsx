@@ -10,32 +10,32 @@ export const products = [
     title: "Moonbeam",
     link: "https://gomoonbeam.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751448346/uydzds2bckaiebjngia6.png",
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
+    title: "Parallex",
+    link: "https://blog-app-p97d.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751447983/izghalbyi87tihkrsib0.png",
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
+    title: "E-com",
+    link: "https://darkfit-frontend-client.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751447963/haxfoitruzqhkbgd0tgi.png",
   },
 
   {
-    title: "Editorially",
-    link: "https://editorially.org",
+    title: "Blog Website",
+    link: "https://blog-app-nu-beryl.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751447960/lznn0olarcswnfam3ezd.png",
   },
   {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
+    title: "My Portfolio Website",
+    link: "https://bhagaban.fun",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751447959/sdoe5ptdncdp5hasccqc.png",
   },
   {
     title: "Pixel Perfect",
@@ -45,58 +45,58 @@ export const products = [
   },
 
   {
-    title: "Algochurn",
-    link: "https://algochurn.com",
+    title: "My Portfolio Website",
+    link: "https://bhagaban.fun",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751447955/qibwwkamwr0rcaujvd0x.png",
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+    title: "Blog Website",
+    link: "https://blog-app-nu-beryl.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751521874/bdhvjvk6c8g3tkgta4cf.png",
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
+    title: "My Portfolio Website",
+    link: "https://bhagaban.fun",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751521865/lecyksg0lyijnjgs2jn6.png",
   },
   {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
+    title: "My Portfolio Website",
+    link: "https://bhagaban.fun",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751521864/t7lvinrfijbqh1ddyok1.png",
   },
   {
     title: "Renderwork Studio",
     link: "https://renderwork.studio",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751521866/a9pe2kq8lbbpeddvftey.png",
   },
 
   {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
+    title: "Blog Website",
+    link: "https://blog-app-nu-beryl.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751521874/bdhvjvk6c8g3tkgta4cf.png",
   },
   {
     title: "Golden Bells Academy",
     link: "https://goldenbellsacademy.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751522024/h1pytpi2hqwrxfdr5qaf.png",
   },
   {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
+    title: "Blog Website",
+    link: "https://blog-app-nu-beryl.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751521874/ctxdypz1oobbnve4a0ev.png",
   },
   {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    title: "E-com",
+    link: "https://darkfit-frontend-client.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      "https://res.cloudinary.com/dctuopwpn/image/upload/v1751522026/hbweothyx30y6rjlzzlf.png",
   },
 ];
