@@ -98,7 +98,7 @@ function Intro() {
       {/* About */}
       <div className="max-w-5xl mx-auto text-center mt-16">
         <h2 className="text-3xl font-semibold mb-4 text-purple-300">
-          More Than Just Visuals
+          More than just visuals
         </h2>
         <p className="text-zinc-400 text-md leading-loose">
           At ContentCrft, we believe every frame should tell a story. Our team
@@ -155,7 +155,7 @@ function Intro() {
                 className="w-full aspect-[9/16] object-cover"
               />
               <p className="text-center mt-2 text-zinc-200 text-sm">
-                {video.title}
+                
               </p>
             </div>
           ))}

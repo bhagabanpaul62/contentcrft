@@ -32,7 +32,7 @@ export function ShortVideo() {
   return (
     <main className="bg-black min-h-screen pt-24 px-6 text-center text-white">
       <div className="max-w-3xl mx-auto mb-10">
-        <h1 className="text-3xl md:text-5xl font-bold text-purple-400 mb-4">
+        <h1 className="text-3xl md:text-5xl font-bold text-purple-400  mb-4">
           Motion Graphics Portfolio
         </h1>
         <p className="text-zinc-300 text-base md:text-lg">

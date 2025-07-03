@@ -50,7 +50,7 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => {
           hovered === index ? "opacity-100" : "opacity-0"
         )}
       >
-        <h2 className="text-white text-base font-semibold">{card.title}</h2>
+        <h2 className="text-white text-base font-semibold"></h2>
       </div>
     </div>
   );

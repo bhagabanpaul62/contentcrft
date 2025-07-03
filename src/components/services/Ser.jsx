@@ -59,13 +59,13 @@ const Card = ({ title, children }) => {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative border border-black/10 dark:border-white/10 group/canvas-card flex items-center justify-center rounded-lg p-4 h-[26rem] w-full"
+      className="relative border border-white/10 group/canvas-card flex items-center justify-center rounded-lg p-4 h-[26rem] w-full"
     >
       {/* Corners */}
-      <Icon className="absolute h-5 w-5 -top-3 -left-3 text-black dark:text-white" />
-      <Icon className="absolute h-5 w-5 -top-3 -right-3 text-black dark:text-white" />
-      <Icon className="absolute h-5 w-5 -bottom-3 -left-3 text-black dark:text-white" />
-      <Icon className="absolute h-5 w-5 -bottom-3 -right-3 text-black dark:text-white" />
+      <Icon className="absolute h-5 w-5 -top-3 -left-3 text-white" />
+      <Icon className="absolute h-5 w-5 -top-3 -right-3 text-white" />
+      <Icon className="absolute h-5 w-5 -bottom-3 -left-3 text-white" />
+      <Icon className="absolute h-5 w-5 -bottom-3 -right-3 text-white" />
 
       {/* Animation Overlay */}
       <AnimatePresence>
@@ -89,7 +89,7 @@ const Card = ({ title, children }) => {
             className="w-20 h-20 rounded-full object-cover"
           />
         </div>
-        <h2 className="text-xl font-bold text-black dark:text-white opacity-0 group-hover/canvas-card:opacity-100 mt-4 transition duration-200 group-hover/canvas-card:-translate-y-2">
+        <h2 className="text-xl font-bold text-white opacity-0 group-hover/canvas-card:opacity-100 mt-4 transition duration-200 group-hover/canvas-card:-translate-y-2">
           {title}
         </h2>
       </div>

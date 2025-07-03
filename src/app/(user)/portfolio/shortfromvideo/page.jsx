@@ -1,5 +1,5 @@
 import React from 'react'
-import {Heder} from '@/components/portfolio/Heder' 
+ 
 import { ShortVideo } from '../../../../components/portfolio/ShortVideo';
 
 function Shortfromvideo() {

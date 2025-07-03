@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Review() {
   return (
-    <div className="h-auto py-16 rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden px-4">
+    <div className="h-auto py-16 rounded-md flex flex-col antialiased bg-black bg-grid-white/[0.05] items-center justify-center relative overflow-hidden px-4">
       <h2 className="text-3xl font-semibold text-purple-300 mb-8 text-center">
         What Our Clients Say
       </h2>
@@ -21,7 +21,7 @@ export function Review() {
       <div className="mt-12 flex gap-4 flex-col sm:flex-row justify-center">
         <Link
           href="/bookacall"
-          className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-6 rounded-full transition"
+          className="bg-purple-600 hover:bg-purple-700 text-white text-center font-medium py-2 px-6 rounded-full transition"
         >
           Book Now
         </Link>
