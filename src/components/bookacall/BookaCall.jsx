@@ -1,24 +1,52 @@
 "use client";
 
 import { useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
 
 export default function BookaCall() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    time: "",
     service: "",
   });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Booking Data:", formData);
-    // Handle form submission here
+    setLoading(true);
+    setSuccess(false);
+    setError(null);
+
+    const { error } = await supabase.from("book_a_service").insert([
+      {
+        full_name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service_needed: formData.service,
+      },
+    ]);
+
+    if (error) {
+      setError("Failed to book a call. Try again later.");
+    } else {
+      setSuccess(true);
+      setFormData({ name: "", email: "", phone: "", service: "" });
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -28,8 +56,14 @@ export default function BookaCall() {
           Book a Free Call
         </h1>
 
+        {success && (
+          <p className="text-green-400 text-center mb-4">
+            🎉 Your request has been submitted!
+          </p>
+        )}
+        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name */}
           <div>
             <label htmlFor="name" className="block mb-1 text-sm font-medium">
               Full Name
@@ -37,15 +71,13 @@ export default function BookaCall() {
             <input
               id="name"
               type="text"
-              placeholder="Your name"
               value={formData.name}
               onChange={(e) => handleChange("name", e.target.value)}
               required
-              className="w-full px-4 py-2 rounded bg-[#232229] text-white border border-[#27272a] focus:outline-none focus:ring-2 focus:ring-white/20"
+              className="w-full px-4 py-2 rounded bg-[#232229] text-white border border-[#27272a] focus:outline-none"
             />
           </div>
 
-          {/* Email */}
           <div>
             <label htmlFor="email" className="block mb-1 text-sm font-medium">
               Email
@@ -53,33 +85,27 @@ export default function BookaCall() {
             <input
               id="email"
               type="email"
-              placeholder="you@example.com"
               value={formData.email}
               onChange={(e) => handleChange("email", e.target.value)}
               required
-              className="w-full px-4 py-2 rounded bg-[#232229] text-white border border-[#27272a] focus:outline-none focus:ring-2 focus:ring-white/20"
+              className="w-full px-4 py-2 rounded bg-[#232229] text-white border border-[#27272a] focus:outline-none"
             />
           </div>
 
-          {/* Phone */}
           <div>
             <label htmlFor="phone" className="block mb-1 text-sm font-medium">
-              Phone Number
+              Phone
             </label>
             <input
               id="phone"
               type="tel"
-              placeholder="+91 98765 43210"
               value={formData.phone}
               onChange={(e) => handleChange("phone", e.target.value)}
               required
-              className="w-full px-4 py-2 rounded bg-[#232229] text-white border border-[#27272a] focus:outline-none focus:ring-2 focus:ring-white/20"
+              className="w-full px-4 py-2 rounded bg-[#232229] text-white border border-[#27272a] focus:outline-none"
             />
           </div>
 
-          
-
-          {/* Service */}
           <div>
             <label htmlFor="service" className="block mb-1 text-sm font-medium">
               Service Needed
@@ -89,7 +115,7 @@ export default function BookaCall() {
               value={formData.service}
               onChange={(e) => handleChange("service", e.target.value)}
               required
-              className="w-full px-4 py-2 rounded bg-[#232229] text-white border border-[#27272a] focus:outline-none focus:ring-2 focus:ring-white/20"
+              className="w-full px-4 py-2 rounded bg-[#232229] text-white border border-[#27272a] focus:outline-none"
             >
               <option value="">Select a service</option>
               <option value="Web Development">Web Development</option>
@@ -104,12 +130,12 @@ export default function BookaCall() {
             </select>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
+            disabled={loading}
             className="w-full mt-4 bg-white text-black font-semibold py-2 px-4 rounded hover:bg-gray-200 transition"
           >
-            Book a Call
+            {loading ? "Booking..." : "Book a Call"}
           </button>
         </form>
       </div>

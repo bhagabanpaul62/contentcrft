@@ -4,6 +4,9 @@ import "./globals.css";
 import Nav from "@/components/nav_bar/Nav";
 import Footer from "@/components/footer/Footer";
 import { BsWhatsapp } from "react-icons/bs";
+import Script from "next/script";
+
+const GA_ID = "G-JWD0CJD3PZ";
 
 export const metadata = {
   metadataBase: new URL("https://contentcrft.in"),
@@ -17,11 +20,11 @@ export const metadata = {
     title: "ContentCrft – Creative Digital Marketing Studio",
     description:
       "Web development, video editing, and marketing solutions that scale. Start your project today.",
-    url: "https://contentcrft.in", // ✅ updated from .com to .in
+    url: "https://contentcrft.in",
     siteName: "ContentCrft",
     images: [
       {
-        url: "/logo.jpg", // resolves to https://contentcrft.in/logo.jpg
+        url: "/logo.jpg",
         width: 1200,
         height: 630,
         alt: "ContentCrft Agency Banner",
@@ -41,13 +44,32 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics Script */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}');
+            `,
+          }}
+        />
+      </head>
       <body>
         <nav>
           <Nav />
         </nav>
         {children}
         <Link
-          href="https://wa.me/7318726633" // Replace with your actual number
+          href="https://wa.me/7318726633"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50"
